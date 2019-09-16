@@ -2,7 +2,7 @@ let counter = document.getElementById("counter");
 let plus = document.getElementById("+");
 let minus = document.getElementById("-");
 let like = document.getElementById("<3");
-let likesList = document.getElementsByClassName("likes");
+let likesList = document.querySelector(".likes");
 let button = document.getElementById("pause");
 let timer = setInterval(increase, 1000);
 let commentsList = document.getElementById("list");
@@ -54,7 +54,7 @@ like.addEventListener("click", function (){
         document.getElementById(identifier).remove();
     };
     bullet.appendChild(content);
-    commentsList.appendChild(bullet);
+    likesList.appendChild(bullet);
     event.preventDefault();
 });
 
