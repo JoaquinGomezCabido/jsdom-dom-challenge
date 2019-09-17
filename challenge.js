@@ -21,10 +21,17 @@ function decrease() {
 function control() {
     if (button.innerText == "pause") {
         button.innerText = "resume"
+        plus.disabled = true;
+        minus.disabled = true;
+        like.disabled = true;
+
         clearInterval(timer);
     } else {
         button.innerText = "pause"
         timer = setInterval(increase, 1000);;
+        plus.disabled = false;
+        minus.disabled = false;
+        like.disabled = false;
     }
 }
 
